@@ -1,6 +1,6 @@
 :root{
     --Text:#000;
-    --Especial: rgb(80, 63, 16);
+    --Especial: rgba(51,34,25,255);
     --bg:#e28418;
 }
 body {
@@ -27,6 +27,9 @@ body {
     border-radius: 25px;
     height: 500px;
 justify-content: center;
+}
+.mnnav{
+    display: none;
 }
 .act{
     margin-top: 40px;
@@ -148,6 +151,9 @@ a:hover{
     color: var(--Especial);
     position: relative;
     bottom:2px ;
+}
+.mnnav a:hover{
+    color: var(--bg);
 }
 nav a{
     padding: 0px 10px;
@@ -320,11 +326,22 @@ i{
 .span{
     color: var(--Especial);
 }
+
 @media (max-width:780px){
     header{
         flex-direction: column-reverse;
         margin-left: 0px;
         padding-left: 0px;
+    }
+    .mnnav{
+        display: flex;
+        color: #fff;
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        background-color: var(--Especial);
+        bottom: 0;
+        height: 8vh;
     }
     header.bajar{
         padding-left: 0px;
