@@ -1,6 +1,6 @@
 :root{
     --Text:#000;
-    --Especial: rgb(80, 63, 16);
+    --Especial:  rgba(51,34,25,255);
     --bg:#e28418;
 }
 body {
@@ -8,7 +8,8 @@ body {
     font-family: 'Montserrat';font-size: 18px;
     background-color: var(--Text);
 }
-span{
+.og{
+    color: var(--bg);
 }
 .Log{
     display: flex;
@@ -118,13 +119,42 @@ input{
 .we{
     display: flex;
     height: 100%;
-    height: 80vh;
     justify-content: right;
     left: 0;
 }
-
+.card{
+    background-color:var(--bg);
+    border-radius: 20px;
+    width:70%;
+    padding: 20px;
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.c{
+    padding: 5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.mision{
+    background-color:var(--bg);
+}
+.vision{
+    background-color: var(--Especial);
+}
+.sub{
+    color: #000;
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2) ;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 80%;
+    text-align: center;
+}
 .who{
-    width: auto;
+    width: 60%;
     display: flex;
     flex-direction: column;
     text-align: justify;
@@ -132,7 +162,6 @@ input{
     justify-content: center;
     color: #fff;
     background-image: url(wood.jpg);
-    ba
 }
 .who p{
     padding-right: 15px;
@@ -223,18 +252,12 @@ nav a{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url(https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(KNIFE.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     
 }
-.canciones{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 40px;
-}
+
 .tarjetas{
     display: flex;
     flex-direction: column;
@@ -266,7 +289,7 @@ header.bajar{
     margin-left: 20px;
 }
 footer{
-    margin-top: 20vh;
+
     background-color:var(--Especial);
     position: relative;
     display: flex;
@@ -286,8 +309,14 @@ footer .wave{
     background-size: 1000px 100px;
 }
 .mock{
+    background-image: url(MOCK2.jpg);
+    background-size: cover;
+    background-position: center;
     display: flex;
-    width: 512px;
+    width:40%;
+    height: 512px;
+    align-items: center;
+    justify-content: center;
 }
 .indicadores{
     font-size: 1.3rem;
@@ -295,6 +324,16 @@ footer .wave{
 img{
     max-width: none;
     height: auto;
+}
+.foda{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.contain{
+    object-fit: contain;
+    width: 100%;
+
 }
 footer .wave#wave1{
     z-index: 1000;
@@ -351,18 +390,56 @@ i{
 .span{
     color: var(--Especial);
 }
+.mnnav{
+    display: none;
+}
+.mnnav a:hover{
+    color: var(--bg);
+}
 @media (max-width:780px){
+
+    .mnnav{
+        display: flex;
+        color: #fff;
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        background-color: var(--Especial);
+        bottom: 0;
+        height: 8vh;
+    }
+    .c{
+        width: 100%;
+        padding: 0%;
+    }
+    .sub2{
+        width: 70%;
+    }
     header{
         flex-direction: column-reverse;
         margin-left: 0px;
         padding-left: 0px;
     }
+    .mock{
+        object-fit: fill;
+        width: 100%;
+        height: 80vh;
+        background-position: center;
+        object-position:center;
+        background-image: url(MOCK2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
     header.bajar{
         padding-left: 0px;
     }
     nav{
         display: none;
         padding-bottom: 15px;
+    }
+    .card{
+        margin: 35px 0 35px 0;
     }
     .midText{
         padding-top: 10vh;
@@ -385,10 +462,7 @@ i{
         flex-direction: column;
         
     }
-    .tarjetas{
-        margin: 10px 0px;
-        flex-direction: row;
-    }
+
     .portadas{
         padding-right:20px ;
         width: auto;
@@ -403,6 +477,9 @@ i{
     .yo{
         width: auto;
         height: 1000px;
+    }
+    .who{
+        width: 100%;
     }
     .soy{
         flex-direction: column;
